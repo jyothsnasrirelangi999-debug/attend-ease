@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #100812;
+    --bg-secondary: #1A101C;
+    --bg-card: #211722;
+    --accent-primary: #FF702E;
+    --accent-secondary: #FF914D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B8ACB8;
+    --border-color: rgba(255, 255, 255, 0.10);
+  }
+
+  body {
+    background-color: #100812;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    selection-background-color: #FF702E;
+    selection-color: #FFFFFF;
+  }
+
+  ::selection {
+    background-color: #FF702E;
+    color: #FFFFFF;
+  }
+}
+
+@keyframes landing-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: landing-marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
